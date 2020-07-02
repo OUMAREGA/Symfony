@@ -2,6 +2,7 @@
     <div class="nav-wrapper">
         <a href="#" class="brand-logo">Pandora</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax }) }}">Addition</a></li>
             <li><a href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax }) }}">Multiplication</a></li>
         </ul>
     </div>
