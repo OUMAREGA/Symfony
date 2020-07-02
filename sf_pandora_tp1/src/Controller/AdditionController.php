@@ -32,9 +32,9 @@ class AdditionController extends AbstractController
      * @Route("/addition", name="voir-addition")
      */
     public function ShowAddition(SessionInterface $session)
-    {   
+    {
         #verifie si la session a les donnees xmin, xmax, ymi, ymax
-        if($session->has("xmin") && $session->has("xmax") && $session->has("ymin") && $session->has("ymax")) {
+        if ($session->has("xmin") && $session->has("xmax") && $session->has("ymin") && $session->has("ymax")) {
             #retourne la vue avec les données de la session
             return $this->render('addition/addition.html.twig', [
                 'xmin' => $session->get('xmin'),

@@ -9,7 +9,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class MultiplyController extends AbstractController
 {
     /**
-     * @Route("/multiply/{xmin}/{xmax}/{ymin}/{ymax} ", name="multiply", requirements={"xmin"="\d+"})
+     * @Route("/multiply/{xmin<\d+>}/{xmax<\d+>}/{ymin<\d+>}/{ymax<\d+>} ", name="multiply")
+     *
+     * @param $xmin
+     * @param $xmax
+     * @param $ymin
+     * @param $ymax
+     * @param SessionInterface $session
+     * @return \Symfony\Component\HttpFoundation\Response
      */
     public function multiplyAction($xmin, $xmax, $ymin, $ymax,  SessionInterface $session)
     {
