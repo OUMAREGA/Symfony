@@ -9,13 +9,15 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Vos multiplications ✅</h1>
+    <h1>Table de  multiplication</h1>
+    <div>
+        <a class="waves-effect waves-light btn red" href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax+1 }) }}">+ ligne</a>
+        <a class="waves-effect waves-light btn red" href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax+1, 'ymin': ymin, 'ymax': ymax }) }}">+ colonne</a>
+        <a class="waves-effect waves-light btn red" href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax-1 }) }}">- ligne</a>
+        <a class="waves-effect waves-light btn red" href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax-1, 'ymin': ymin, 'ymax': ymax }) }}">- colonne</a>
+    </div>
+    <br>
     <table class="striped">
-        <thead>
-        <tr>
-            <th colspan="2">Table de multiplication</th>
-        </tr>
-        </thead>
         <tbody>
         <tr>
             <td></td>
@@ -32,12 +34,6 @@
             </tr>
         {% endfor %}
         </tbody>
-        </table>
-    <div>
-        <a href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax+1 }) }}">Ajouter une ligne</a> | <a href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax+1, 'ymin': ymin, 'ymax': ymax }) }}">Ajouter une colonne</a>
-    </div>
-    <div>
-        <a href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax-1 }) }}">Supprimer une ligne</a> | <a href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax-1, 'ymin': ymin, 'ymax': ymax }) }}">Supprimer une colonne</a>
-    </div>
+    </table>
 </div>
 {% endblock %}

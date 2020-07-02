@@ -11,10 +11,10 @@ class MultiplyController extends AbstractController
     /**
      * @Route("/multiply/{xmin<\d+>}/{xmax<\d+>}/{ymin<\d+>}/{ymax<\d+>} ", name="multiply")
      *
-     * @param $xmin
-     * @param $xmax
-     * @param $ymin
-     * @param $ymax
+     * @param $xmin integer
+     * @param $xmax integer
+     * @param $ymin integer
+     * @param $ymax integer
      * @param SessionInterface $session
      * @return \Symfony\Component\HttpFoundation\Response
      */

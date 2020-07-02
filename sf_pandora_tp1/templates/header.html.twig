@@ -1,9 +1,11 @@
+<header>
 <nav>
-    <div class="nav-wrapper">
-        <a href="#" class="brand-logo">Pandora</a>
+    <div class="nav-wrapper" style="padding:10px;">
+        <a href="{{path('accueil')}}" class="brand-logo">Pandora</a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax }) }}">Addition</a></li>
-            <li><a href="{{ path('multiply', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax }) }}">Multiplication</a></li>
+            <li><a href="{{ path('accueil')}}">Accueil</a></li>
+            <li><a href="{{ path('voir-addition')}}">Addition</a></li>
+            <li><a href="{{ path('sessionmultiply')}}">Multiplication</a></li>
         </ul>
     </div>
 </nav>
