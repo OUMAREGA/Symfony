@@ -18,15 +18,16 @@
     </style>
 
     <div class="example-wrapper">
-        <h1>Table addition</h1>
+        <h1>Table d'addition</h1>
+        <div>
+            <a class="waves-effect waves-light btn red" href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax+1 }) }}">+ ligne</a> 
+            <a class="waves-effect waves-light btn red" href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax+1, 'ymin': ymin, 'ymax': ymax }) }}">+ colonne</a>
+            <a class="waves-effect waves-light btn red" href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax-1 }) }}">- ligne</a> 
+            <a class="waves-effect waves-light btn red" href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax-1, 'ymin': ymin, 'ymax': ymax }) }}">- colonne</a>
+        </div>
+        <br>
         <table class="striped">
             {# Entête du tableau #}
-
-            <thead>
-            <tr>
-                <th colspan="2">Table d'addition</th>
-            </tr>
-            </thead>
             <tbody>
             {# Affiche des valeurs entre xmin et xmax #}
             <tr>
@@ -47,15 +48,5 @@
             {% endfor %}
             </tbody>
         </table>
-        <div>
-            <a href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax+1 }) }}">Ajouter une
-                ligne</a> | <a href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax+1, 'ymin': ymin, 'ymax': ymax }) }}">Ajouter
-                une colonne</a>
-        </div>
-        <div>
-            <a href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax, 'ymin': ymin, 'ymax': ymax-1 }) }}">Supprimer une
-                ligne</a> | <a href="{{ path('addition', { 'xmin': xmin, 'xmax': xmax-1, 'ymin': ymin, 'ymax': ymax }) }}">Supprimer
-                une colonne</a>
-        </div>
     </div>
 {% endblock %}
