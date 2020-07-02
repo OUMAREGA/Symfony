@@ -45,7 +45,7 @@ class MultiplyController extends AbstractController
             ]);
         } else {
             #retourne les valeurs par defaut
-            return $this->render('addition/addition.html.twig', [
+            return $this->render('multiply/index.html.twig', [
                 'xmin' => 0,
                 'xmax' => 10,
                 'ymin' => 0,

@@ -8,9 +8,15 @@
     {% endblock %}
 </head>
 <body>
+{% block header %}
+    {% include 'header.html.twig' %}
+{% endblock %}
 {% block body %}{% endblock %}
 {% block scripts  %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+{% endblock %}
+{% block footer %}
+    {% include 'footer.html.twig' %}
 {% endblock %}
 </body>
 </html>
